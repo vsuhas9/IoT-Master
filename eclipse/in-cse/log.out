@@ -1,0 +1,1235 @@
+[2021-07-29 18:08:39,861 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+Starting Data Mapper
+[2021-07-29 18:08:39,861 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+Registering XML Mapper Service..
+[2021-07-29 18:08:46,492 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+XML Mapper service registered.
+[2021-07-29 18:08:46,492 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+Registering JSON Mapper Service..
+[2021-07-29 18:08:51,846 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+JSON Mapper service registered.
+[2021-07-29 18:08:51,949 INFO] - org.eclipse.om2m.binding.coap.Activator 
+Register CoAP RestClientService..
+[2021-07-29 18:08:51,950 INFO] - org.eclipse.om2m.binding.coap.Activator 
+Starting CoAP server
+[2021-07-29 18:08:51,990 INFO] - org.eclipse.om2m.binding.coap.Activator 
+CseService opened
+[2021-07-29 18:08:51,991 INFO] - org.eclipse.om2m.binding.http.Activator 
+Register HTTP RestClientService..
+[2021-07-29 18:08:51,994 INFO] - org.eclipse.om2m.binding.http.Activator 
+HTTP RestClientService is registered.
+[2021-07-29 18:08:52,237 INFO] - org.eclipse.om2m.persistence.eclipselink.Activator 
+Starting Persistence JPA plugin...
+[2021-07-29 18:08:52,239 INFO] - org.eclipse.om2m.core.Activator 
+Starting CSE...
+[2021-07-29 18:08:52,239 INFO] - org.eclipse.om2m.core.Activator 
+Added Data Mapper Service: application/xml
+[2021-07-29 18:08:52,240 INFO] - org.eclipse.om2m.core.Activator 
+Added Data Mapper Service: application/json
+[2021-07-29 18:08:52,240 INFO] - org.eclipse.om2m.persistence.eclipselink.internal.DBServiceJPAImpl 
+Initializing Database...
+[2021-07-29 18:08:52,240 INFO] - org.eclipse.om2m.persistence.eclipselink.internal.DBServiceJPAImpl 
+Creating new EntityManagerFactory...
+[2021-07-29 18:08:52,241 INFO] - org.eclipse.om2m.core.Activator 
+Rest client service discovered. Protocol: coap
+[2021-07-29 18:08:52,241 INFO] - org.eclipse.om2m.core.Activator 
+Rest client service discovered. Protocol: http
+[2021-07-29 18:08:52,243 INFO] - org.eclipse.om2m.binding.http.Activator 
+HttpService discovered
+[2021-07-29 18:08:52,243 INFO] - org.eclipse.om2m.binding.http.Activator 
+Register / context
+[2021-07-29 18:08:52,287 INFO] - org.eclipse.om2m.webapp.resourcesbrowser.json.Activator 
+HttpService discovered
+[2021-07-29 18:08:52,287 INFO] - org.eclipse.om2m.webapp.resourcesbrowser.json.Activator 
+Register /webpage http context
+[2021-07-29 18:08:52,293 INFO] - org.eclipse.om2m.sdt.comparator.xml.Activator 
+HttpService discovered
+[2021-07-29 18:08:52,293 INFO] - org.eclipse.om2m.sdt.comparator.xml.Activator 
+Register /comparator http context
+[2021-07-29 18:08:53,767 INFO] - org.eclipse.om2m.persistence.eclipselink.internal.DBServiceJPAImpl 
+DataBase initialized.
+[2021-07-29 18:08:53,782 INFO] - org.eclipse.om2m.persistence.eclipselink.Activator 
+Registering Database (JPA-EL) Service
+[2021-07-29 18:08:53,782 INFO] - org.eclipse.om2m.core.Activator 
+DataBase persistence service discovered
+[2021-07-29 18:08:53,783 INFO] - org.eclipse.om2m.core.thread.CoreExecutor 
+Creating thread pool with corePoolSize=5 & maximumSize=50
+[2021-07-29 18:08:53,785 INFO] - org.eclipse.om2m.core.CSEInitializer 
+Initializating the cseBase
+[2021-07-29 18:08:53,805 INFO] - org.eclipse.om2m.core.CSEInitializer 
+cseBase already initialized
+[2021-07-29 18:08:53,805 INFO] - org.eclipse.om2m.core.Activator 
+Registering CseService...
+[2021-07-29 18:08:53,814 INFO] - org.eclipse.om2m.binding.http.Activator 
+CseService discovered
+[2021-07-29 18:08:53,902 INFO] - org.eclipse.om2m.sdt.home.monitoring.util.AeRegistration 
+createACP
+[2021-07-29 18:08:53,902 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ to=/in-cse/in-name,
+ from=admin:admin,
+ resourceType=1,
+ content=org.eclipse.om2m.commons.resource.AccessControlPolicy@377286b0,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ , 
+,tokens=null]
+[2021-07-29 18:08:53,903 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /in-cse/in-name
+[2021-07-29 18:08:53,907 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AccessControlPolicyController]
+[2021-07-29 18:08:53,929 ERROR] - org.eclipse.om2m.core.controller.Controller 
+om2mException
+org.eclipse.om2m.commons.exceptions.ConflictException: Name already present in the parent collection.
+	at org.eclipse.om2m.core.controller.AccessControlPolicyController.doCreate(AccessControlPolicyController.java:185)
+	at org.eclipse.om2m.core.controller.Controller.doRequest(Controller.java:77)
+	at org.eclipse.om2m.core.router.Router.doRequest(Router.java:240)
+	at org.eclipse.om2m.sdt.home.monitoring.util.AeRegistration.createACP(AeRegistration.java:181)
+	at org.eclipse.om2m.sdt.home.monitoring.util.AeRegistration.createAe(AeRegistration.java:93)
+	at org.eclipse.om2m.sdt.home.monitoring.Activator.activate(Activator.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:235)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:914)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:862)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:801)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:225)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:464)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:482)
+	at org.eclipse.om2m.core.Activator$2$1.run(Activator.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2021-07-29 18:08:53,930 INFO] - org.eclipse.om2m.core.controller.Controller 
+Clear and close transaction
+[2021-07-29 18:08:53,935 ERROR] - org.eclipse.om2m.core.router.Router 
+OM2M exception caught in Router: Name already present in the parent collection.
+org.eclipse.om2m.commons.exceptions.ConflictException: Name already present in the parent collection.
+	at org.eclipse.om2m.core.controller.AccessControlPolicyController.doCreate(AccessControlPolicyController.java:185)
+	at org.eclipse.om2m.core.controller.Controller.doRequest(Controller.java:77)
+	at org.eclipse.om2m.core.router.Router.doRequest(Router.java:240)
+	at org.eclipse.om2m.sdt.home.monitoring.util.AeRegistration.createACP(AeRegistration.java:181)
+	at org.eclipse.om2m.sdt.home.monitoring.util.AeRegistration.createAe(AeRegistration.java:93)
+	at org.eclipse.om2m.sdt.home.monitoring.Activator.activate(Activator.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:235)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:914)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:862)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:801)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:225)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:464)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:482)
+	at org.eclipse.om2m.core.Activator$2$1.run(Activator.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2021-07-29 18:08:53,935 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [
+ responseStatusCode=4105
+ to=admin:admin
+ from=/in-cse
+ contentType=text/plain,
+ content (Only first 1000 caracters)=
+ Name already present in the parent collection.
+]
+[2021-07-29 18:08:53,935 INFO] - org.eclipse.om2m.sdt.home.monitoring.util.AeRegistration 
+createACP KO ResponsePrimitive [
+ responseStatusCode=4105
+ to=admin:admin
+ from=/in-cse
+ contentType=text/plain,
+ content (Only first 1000 caracters)=
+ Name already present in the parent collection.
+]
+[2021-07-29 18:08:53,937 INFO] - org.eclipse.om2m.core.Activator 
+IPE service discovered: HomeMonitoringPOA
+[2021-07-29 18:08:53,938 INFO] - org.eclipse.om2m.sdt.home.monitoring.Activator 
+Register test /Home_Monitoring_Application http context
+[2021-07-29 18:08:53,943 INFO] - org.eclipse.om2m.ipe.sdt.Activator 
+setCseService
+[2021-07-29 18:08:53,944 INFO] - org.eclipse.om2m.ipe.sdt.Activator 
+activate SDT IPE
+[2021-07-29 18:08:53,944 INFO] - org.eclipse.om2m.ipe.sdt.Activator 
+updated(cse.id.to.be.announced=null)
+updated(cse.name.to.be.announced=null)
+updated(announcement.enabled=false)
+updated(ipe.under.announced.resource=false)
+[2021-07-29 18:08:53,944 INFO] - org.eclipse.om2m.ipe.sdt.Activator 
+Start IPE App null / null / false
+[2021-07-29 18:08:53,945 INFO] - org.eclipse.om2m.ipe.sdt.SDTIpeApplication 
+create ipe application
+[2021-07-29 18:08:53,945 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ to=/in-cse/in-name,
+ from=admin:admin,
+ resourceType=2,
+ content=org.eclipse.om2m.commons.resource.AE@19a0c42c,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ , 
+,tokens=null]
+[2021-07-29 18:08:53,946 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /in-cse/in-name
+[2021-07-29 18:08:53,947 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2021-07-29 18:08:53,960 ERROR] - org.eclipse.om2m.core.controller.Controller 
+om2mException
+org.eclipse.om2m.commons.exceptions.ConflictException: Name already present in the parent collection.
+	at org.eclipse.om2m.core.controller.AEController.doCreate(AEController.java:316)
+	at org.eclipse.om2m.core.controller.Controller.doRequest(Controller.java:77)
+	at org.eclipse.om2m.core.router.Router.doRequest(Router.java:240)
+	at org.eclipse.om2m.ipe.sdt.CseUtil.sendCreateApplicationEntityRequest(CseUtil.java:62)
+	at org.eclipse.om2m.ipe.sdt.SDTIpeApplication.publishSDTIPEApplication(SDTIpeApplication.java:124)
+	at org.eclipse.om2m.ipe.sdt.Activator.registerSdtIpeApplication(Activator.java:125)
+	at org.eclipse.om2m.ipe.sdt.Activator.startSdtIpe(Activator.java:152)
+	at org.eclipse.om2m.ipe.sdt.Activator.activate(Activator.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:235)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:914)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:862)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:801)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:225)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:464)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:482)
+	at org.eclipse.om2m.core.Activator$2$1.run(Activator.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2021-07-29 18:08:53,960 INFO] - org.eclipse.om2m.core.controller.Controller 
+Clear and close transaction
+[2021-07-29 18:08:53,960 ERROR] - org.eclipse.om2m.core.router.Router 
+OM2M exception caught in Router: Name already present in the parent collection.
+org.eclipse.om2m.commons.exceptions.ConflictException: Name already present in the parent collection.
+	at org.eclipse.om2m.core.controller.AEController.doCreate(AEController.java:316)
+	at org.eclipse.om2m.core.controller.Controller.doRequest(Controller.java:77)
+	at org.eclipse.om2m.core.router.Router.doRequest(Router.java:240)
+	at org.eclipse.om2m.ipe.sdt.CseUtil.sendCreateApplicationEntityRequest(CseUtil.java:62)
+	at org.eclipse.om2m.ipe.sdt.SDTIpeApplication.publishSDTIPEApplication(SDTIpeApplication.java:124)
+	at org.eclipse.om2m.ipe.sdt.Activator.registerSdtIpeApplication(Activator.java:125)
+	at org.eclipse.om2m.ipe.sdt.Activator.startSdtIpe(Activator.java:152)
+	at org.eclipse.om2m.ipe.sdt.Activator.activate(Activator.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:235)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:914)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:862)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:801)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:225)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:464)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:482)
+	at org.eclipse.om2m.core.Activator$2$1.run(Activator.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2021-07-29 18:08:53,961 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [
+ responseStatusCode=4105
+ to=admin:admin
+ from=/in-cse
+ contentType=text/plain,
+ content (Only first 1000 caracters)=
+ Name already present in the parent collection.
+]
+[2021-07-29 18:08:53,961 INFO] - org.eclipse.om2m.ipe.sdt.SDTIpeApplication 
+delete ipe application
+[2021-07-29 18:08:53,961 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ to=/in-cse/in-name,
+ from=admin:admin,
+ resourceType=2,
+ content=org.eclipse.om2m.commons.resource.AE@19a0c42c,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ , 
+,tokens=null]
+[2021-07-29 18:08:53,961 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /in-cse/in-name
+[2021-07-29 18:08:53,962 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2021-07-29 18:08:53,970 ERROR] - org.eclipse.om2m.core.controller.Controller 
+om2mException
+org.eclipse.om2m.commons.exceptions.ConflictException: Name already present in the parent collection.
+	at org.eclipse.om2m.core.controller.AEController.doCreate(AEController.java:316)
+	at org.eclipse.om2m.core.controller.Controller.doRequest(Controller.java:77)
+	at org.eclipse.om2m.core.router.Router.doRequest(Router.java:240)
+	at org.eclipse.om2m.ipe.sdt.CseUtil.sendCreateApplicationEntityRequest(CseUtil.java:62)
+	at org.eclipse.om2m.ipe.sdt.SDTIpeApplication.publishSDTIPEApplication(SDTIpeApplication.java:124)
+	at org.eclipse.om2m.ipe.sdt.Activator.registerSdtIpeApplication(Activator.java:125)
+	at org.eclipse.om2m.ipe.sdt.Activator.startSdtIpe(Activator.java:152)
+	at org.eclipse.om2m.ipe.sdt.Activator.activate(Activator.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:235)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:914)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:862)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:801)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:225)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:464)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:482)
+	at org.eclipse.om2m.core.Activator$2$1.run(Activator.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2021-07-29 18:08:53,970 INFO] - org.eclipse.om2m.core.controller.Controller 
+Clear and close transaction
+[2021-07-29 18:08:53,971 ERROR] - org.eclipse.om2m.core.router.Router 
+OM2M exception caught in Router: Name already present in the parent collection.
+org.eclipse.om2m.commons.exceptions.ConflictException: Name already present in the parent collection.
+	at org.eclipse.om2m.core.controller.AEController.doCreate(AEController.java:316)
+	at org.eclipse.om2m.core.controller.Controller.doRequest(Controller.java:77)
+	at org.eclipse.om2m.core.router.Router.doRequest(Router.java:240)
+	at org.eclipse.om2m.ipe.sdt.CseUtil.sendCreateApplicationEntityRequest(CseUtil.java:62)
+	at org.eclipse.om2m.ipe.sdt.SDTIpeApplication.publishSDTIPEApplication(SDTIpeApplication.java:124)
+	at org.eclipse.om2m.ipe.sdt.Activator.registerSdtIpeApplication(Activator.java:125)
+	at org.eclipse.om2m.ipe.sdt.Activator.startSdtIpe(Activator.java:152)
+	at org.eclipse.om2m.ipe.sdt.Activator.activate(Activator.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:235)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:914)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:862)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:801)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:225)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:464)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:482)
+	at org.eclipse.om2m.core.Activator$2$1.run(Activator.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2021-07-29 18:08:53,971 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [
+ responseStatusCode=4105
+ to=admin:admin
+ from=/in-cse
+ contentType=text/plain,
+ content (Only first 1000 caracters)=
+ Name already present in the parent collection.
+]
+[2021-07-29 18:08:53,971 INFO] - org.eclipse.om2m.ipe.sdt.SDTIpeApplication 
+delete ipe application
+[2021-07-29 18:08:53,971 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ to=/in-cse/in-name,
+ from=admin:admin,
+ resourceType=2,
+ content=org.eclipse.om2m.commons.resource.AE@19a0c42c,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ , 
+,tokens=null]
+[2021-07-29 18:08:53,971 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /in-cse/in-name
+[2021-07-29 18:08:53,972 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2021-07-29 18:08:53,979 ERROR] - org.eclipse.om2m.core.controller.Controller 
+om2mException
+org.eclipse.om2m.commons.exceptions.ConflictException: Name already present in the parent collection.
+	at org.eclipse.om2m.core.controller.AEController.doCreate(AEController.java:316)
+	at org.eclipse.om2m.core.controller.Controller.doRequest(Controller.java:77)
+	at org.eclipse.om2m.core.router.Router.doRequest(Router.java:240)
+	at org.eclipse.om2m.ipe.sdt.CseUtil.sendCreateApplicationEntityRequest(CseUtil.java:62)
+	at org.eclipse.om2m.ipe.sdt.SDTIpeApplication.publishSDTIPEApplication(SDTIpeApplication.java:124)
+	at org.eclipse.om2m.ipe.sdt.Activator.registerSdtIpeApplication(Activator.java:125)
+	at org.eclipse.om2m.ipe.sdt.Activator.startSdtIpe(Activator.java:152)
+	at org.eclipse.om2m.ipe.sdt.Activator.activate(Activator.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:235)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:914)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:862)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:801)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:225)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:464)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:482)
+	at org.eclipse.om2m.core.Activator$2$1.run(Activator.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2021-07-29 18:08:53,980 INFO] - org.eclipse.om2m.core.controller.Controller 
+Clear and close transaction
+[2021-07-29 18:08:53,980 ERROR] - org.eclipse.om2m.core.router.Router 
+OM2M exception caught in Router: Name already present in the parent collection.
+org.eclipse.om2m.commons.exceptions.ConflictException: Name already present in the parent collection.
+	at org.eclipse.om2m.core.controller.AEController.doCreate(AEController.java:316)
+	at org.eclipse.om2m.core.controller.Controller.doRequest(Controller.java:77)
+	at org.eclipse.om2m.core.router.Router.doRequest(Router.java:240)
+	at org.eclipse.om2m.ipe.sdt.CseUtil.sendCreateApplicationEntityRequest(CseUtil.java:62)
+	at org.eclipse.om2m.ipe.sdt.SDTIpeApplication.publishSDTIPEApplication(SDTIpeApplication.java:124)
+	at org.eclipse.om2m.ipe.sdt.Activator.registerSdtIpeApplication(Activator.java:125)
+	at org.eclipse.om2m.ipe.sdt.Activator.startSdtIpe(Activator.java:152)
+	at org.eclipse.om2m.ipe.sdt.Activator.activate(Activator.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:235)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:914)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:862)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:801)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:225)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:464)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:482)
+	at org.eclipse.om2m.core.Activator$2$1.run(Activator.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2021-07-29 18:08:53,980 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [
+ responseStatusCode=4105
+ to=admin:admin
+ from=/in-cse
+ contentType=text/plain,
+ content (Only first 1000 caracters)=
+ Name already present in the parent collection.
+]
+[2021-07-29 18:08:53,980 INFO] - org.eclipse.om2m.ipe.sdt.SDTIpeApplication 
+delete ipe application
+[2021-07-29 18:08:53,982 INFO] - org.eclipse.om2m.binding.coap.Activator 
+CSE Service discovered
+[2021-07-29 18:08:53,982 INFO] - org.eclipse.om2m.core.Activator 
+CSE Started
+[2021-07-29 18:09:43,339 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-07-29 18:09:43,342 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/in-cse,
+ resultContent=5,
+ filterCriteria=org.eclipse.om2m.commons.resource.FilterCriteria@48643596,
+ , 
+,tokens=null]
+[2021-07-29 18:09:43,342 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+parseAuthorizationHeader(authorizationHeader:null)
+[2021-07-29 18:09:43,342 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/json
+[2021-07-29 18:09:43,342 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/in-cse,
+ from=admin:admin,
+ requestIdentifier=OM2M-webpage,
+ resultContent=5,
+ filterCriteria=org.eclipse.om2m.commons.resource.FilterCriteria@48643596,
+ returnContentType=application/json,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5], lvl=[1]}, 
+,tokens=null]
+[2021-07-29 18:09:43,342 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /in-cse
+[2021-07-29 18:09:43,343 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [CSEBaseController]
+[2021-07-29 18:09:43,372 INFO] - org.eclipse.om2m.core.controller.Controller 
+Clear and close transaction
+[2021-07-29 18:09:43,386 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [
+ responseStatusCode=2000
+ requestIdentifier=OM2M-webpage
+ to=admin:admin
+ from=/in-cse
+ contentType=application/json,
+ content (Only first 1000 caracters)=
+ {
+   "m2m:cb" : {
+      "rn" : "in-name",
+      "ty" : 5,
+      "ri" : "/in-cse",
+      "ct" : "20210514T202324",
+      "lt" : "20210514T202324",
+      "acpi" : [ "/in-cse/acp-882400459" ],
+      "cst" : 1,
+      "csi" : "in-cse",
+      "srt" : [ 1, 2, 3, 4, 5, 9, 14, 15, 16, 17, 23, 28 ],
+      "poa" : [ "http://127.0.0.1:8080/" ],
+      "ch" : [ {
+         "nm" : "acp_admin",
+         "typ" : 1,
+         "val" : "/in-cse/acp-882400459"
+      }, {
+         "nm" : "SDT_Home_Monitoring_Application_ACP",
+         "typ" : 1,
+         "val" : "/in-cse/acp-333630959"
+      }, {
+         "nm" : "ACP_Device_Admin_1621004004587",
+         "typ" : 1,
+         "val" : "/in-cse/acp-424152512"
+      }, {
+         "nm" : "SDT_Home_Monitoring_Application",
+         "typ" : 2,
+         "val" : "/in-cse/CAE216950723"
+      }, {
+         "nm" : "SDT_IPE",
+         "typ" : 2,
+         "val" : "/in-cse/CAE753430556"
+      }, {
+         "nm" : "mn-name",
+         "typ" :  (...)
+]
+[2021-07-29 18:09:43,386 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+send UTF8
+[2021-07-29 18:09:47,481 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-07-29 18:09:47,481 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/in-cse/CAE753430556,
+ resultContent=5,
+ filterCriteria=org.eclipse.om2m.commons.resource.FilterCriteria@305ae7f1,
+ , 
+,tokens=null]
+[2021-07-29 18:09:47,481 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+parseAuthorizationHeader(authorizationHeader:null)
+[2021-07-29 18:09:47,481 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/json
+[2021-07-29 18:09:47,481 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/in-cse/CAE753430556,
+ from=admin:admin,
+ requestIdentifier=OM2M-webpage,
+ resultContent=5,
+ filterCriteria=org.eclipse.om2m.commons.resource.FilterCriteria@305ae7f1,
+ returnContentType=application/json,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5], lvl=[1]}, 
+,tokens=null]
+[2021-07-29 18:09:47,481 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /in-cse/CAE753430556
+[2021-07-29 18:09:47,482 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2021-07-29 18:09:47,487 INFO] - org.eclipse.om2m.core.controller.Controller 
+Clear and close transaction
+[2021-07-29 18:09:47,492 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [
+ responseStatusCode=2000
+ requestIdentifier=OM2M-webpage
+ to=admin:admin
+ from=/in-cse
+ contentType=application/json,
+ content (Only first 1000 caracters)=
+ {
+   "m2m:ae" : {
+      "rn" : "SDT_IPE",
+      "ty" : 2,
+      "ri" : "/in-cse/CAE753430556",
+      "pi" : "/in-cse",
+      "ct" : "20210514T202324",
+      "lt" : "20210514T202324",
+      "acpi" : [ "/in-cse/acp-882400459" ],
+      "et" : "20220514T202324",
+      "api" : "SDT_IPE",
+      "aei" : "CAE753430556",
+      "poa" : [ "sdt" ],
+      "rr" : true
+   }
+}
+]
+[2021-07-29 18:09:47,492 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+send UTF8
+[2021-07-29 18:09:48,346 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-07-29 18:09:48,347 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/in-cse/CAE216950723,
+ resultContent=5,
+ filterCriteria=org.eclipse.om2m.commons.resource.FilterCriteria@46b999f8,
+ , 
+,tokens=null]
+[2021-07-29 18:09:48,347 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+parseAuthorizationHeader(authorizationHeader:null)
+[2021-07-29 18:09:48,347 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/json
+[2021-07-29 18:09:48,347 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/in-cse/CAE216950723,
+ from=admin:admin,
+ requestIdentifier=OM2M-webpage,
+ resultContent=5,
+ filterCriteria=org.eclipse.om2m.commons.resource.FilterCriteria@46b999f8,
+ returnContentType=application/json,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5], lvl=[1]}, 
+,tokens=null]
+[2021-07-29 18:09:48,347 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /in-cse/CAE216950723
+[2021-07-29 18:09:48,347 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2021-07-29 18:09:48,355 INFO] - org.eclipse.om2m.core.controller.Controller 
+Clear and close transaction
+[2021-07-29 18:09:48,358 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [
+ responseStatusCode=2000
+ requestIdentifier=OM2M-webpage
+ to=admin:admin
+ from=/in-cse
+ contentType=application/json,
+ content (Only first 1000 caracters)=
+ {
+   "m2m:ae" : {
+      "rn" : "SDT_Home_Monitoring_Application",
+      "ty" : 2,
+      "ri" : "/in-cse/CAE216950723",
+      "pi" : "/in-cse",
+      "ct" : "20210514T202324",
+      "lt" : "20210514T202324",
+      "lbl" : [ "ResourceID/SDT_Home_Monitoring_Application", "ResourceType/Application" ],
+      "acpi" : [ "/in-cse/acp-882400459", "/in-cse/acp-333630959" ],
+      "et" : "20220514T202324",
+      "apn" : "Home Monitoring Application",
+      "api" : "SDT_Home_Monitoring_Application",
+      "aei" : "CAE216950723",
+      "poa" : [ "HomeMonitoringPOA" ],
+      "ch" : [ {
+         "nm" : "ICON",
+         "typ" : 3,
+         "val" : "/in-cse/cnt-199210485"
+      }, {
+         "nm" : "PRESENTATION_URL",
+         "typ" : 3,
+         "val" : "/in-cse/cnt-639774040"
+      } ],
+      "rr" : true
+   }
+}
+]
+[2021-07-29 18:09:48,358 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+send UTF8
+[2021-07-29 18:09:49,051 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-07-29 18:09:49,051 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/in-cse/cnt-199210485,
+ resultContent=5,
+ filterCriteria=org.eclipse.om2m.commons.resource.FilterCriteria@4d311a1e,
+ , 
+,tokens=null]
+[2021-07-29 18:09:49,051 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+parseAuthorizationHeader(authorizationHeader:null)
+[2021-07-29 18:09:49,051 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/json
+[2021-07-29 18:09:49,051 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/in-cse/cnt-199210485,
+ from=admin:admin,
+ requestIdentifier=OM2M-webpage,
+ resultContent=5,
+ filterCriteria=org.eclipse.om2m.commons.resource.FilterCriteria@4d311a1e,
+ returnContentType=application/json,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5], lvl=[1]}, 
+,tokens=null]
+[2021-07-29 18:09:49,051 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /in-cse/cnt-199210485
+[2021-07-29 18:09:49,052 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2021-07-29 18:09:49,061 INFO] - org.eclipse.om2m.core.controller.Controller 
+Clear and close transaction
+[2021-07-29 18:09:49,063 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [
+ responseStatusCode=2000
+ requestIdentifier=OM2M-webpage
+ to=admin:admin
+ from=/in-cse
+ contentType=application/json,
+ content (Only first 1000 caracters)=
+ {
+   "m2m:cnt" : {
+      "rn" : "ICON",
+      "ty" : 3,
+      "ri" : "/in-cse/cnt-199210485",
+      "pi" : "/in-cse/CAE216950723",
+      "ct" : "20210514T202324",
+      "lt" : "20210514T202324",
+      "acpi" : [ "/in-cse/acp-882400459", "/in-cse/acp-333630959" ],
+      "et" : "20220514T202324",
+      "st" : 1,
+      "mni" : 10,
+      "mbs" : 10000,
+      "mia" : 0,
+      "cni" : 1,
+      "cbs" : 52,
+      "ch" : [ {
+         "nm" : "cin_877538080",
+         "typ" : 4,
+         "val" : "/in-cse/cin-877538080"
+      } ],
+      "ol" : "/in-cse/in-name/SDT_Home_Monitoring_Application/ICON/ol",
+      "la" : "/in-cse/in-name/SDT_Home_Monitoring_Application/ICON/la"
+   }
+}
+]
+[2021-07-29 18:09:49,063 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+send UTF8
+[2021-07-29 18:10:54,977 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+Starting Data Mapper
+[2021-07-29 18:10:54,977 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+Registering XML Mapper Service..
+[2021-07-29 18:10:59,563 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+XML Mapper service registered.
+[2021-07-29 18:10:59,563 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+Registering JSON Mapper Service..
+[2021-07-29 18:11:02,519 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+JSON Mapper service registered.
+[2021-07-29 18:11:02,638 INFO] - org.eclipse.om2m.binding.coap.Activator 
+Register CoAP RestClientService..
+[2021-07-29 18:11:02,638 INFO] - org.eclipse.om2m.binding.coap.Activator 
+Starting CoAP server
+[2021-07-29 18:11:02,659 INFO] - org.eclipse.om2m.binding.coap.Activator 
+CseService opened
+[2021-07-29 18:11:02,660 INFO] - org.eclipse.om2m.binding.http.Activator 
+Register HTTP RestClientService..
+[2021-07-29 18:11:02,663 INFO] - org.eclipse.om2m.binding.http.Activator 
+HTTP RestClientService is registered.
+[2021-07-29 18:11:02,884 INFO] - org.eclipse.om2m.persistence.eclipselink.Activator 
+Starting Persistence JPA plugin...
+[2021-07-29 18:11:02,886 INFO] - org.eclipse.om2m.core.Activator 
+Starting CSE...
+[2021-07-29 18:11:02,886 INFO] - org.eclipse.om2m.core.Activator 
+Added Data Mapper Service: application/xml
+[2021-07-29 18:11:02,886 INFO] - org.eclipse.om2m.core.Activator 
+Added Data Mapper Service: application/json
+[2021-07-29 18:11:02,886 INFO] - org.eclipse.om2m.persistence.eclipselink.internal.DBServiceJPAImpl 
+Initializing Database...
+[2021-07-29 18:11:02,887 INFO] - org.eclipse.om2m.persistence.eclipselink.internal.DBServiceJPAImpl 
+Creating new EntityManagerFactory...
+[2021-07-29 18:11:02,887 INFO] - org.eclipse.om2m.core.Activator 
+Rest client service discovered. Protocol: coap
+[2021-07-29 18:11:02,887 INFO] - org.eclipse.om2m.core.Activator 
+Rest client service discovered. Protocol: http
+[2021-07-29 18:11:02,889 INFO] - org.eclipse.om2m.binding.http.Activator 
+HttpService discovered
+[2021-07-29 18:11:02,890 INFO] - org.eclipse.om2m.binding.http.Activator 
+Register / context
+[2021-07-29 18:11:03,153 INFO] - org.eclipse.om2m.webapp.resourcesbrowser.json.Activator 
+HttpService discovered
+[2021-07-29 18:11:03,153 INFO] - org.eclipse.om2m.webapp.resourcesbrowser.json.Activator 
+Register /webpage http context
+[2021-07-29 18:11:03,157 INFO] - org.eclipse.om2m.sdt.comparator.xml.Activator 
+HttpService discovered
+[2021-07-29 18:11:03,157 INFO] - org.eclipse.om2m.sdt.comparator.xml.Activator 
+Register /comparator http context
+[2021-07-29 18:11:04,464 INFO] - org.eclipse.om2m.persistence.eclipselink.internal.DBServiceJPAImpl 
+DataBase initialized.
+[2021-07-29 18:11:04,476 INFO] - org.eclipse.om2m.persistence.eclipselink.Activator 
+Registering Database (JPA-EL) Service
+[2021-07-29 18:11:04,477 INFO] - org.eclipse.om2m.core.Activator 
+DataBase persistence service discovered
+[2021-07-29 18:11:04,478 INFO] - org.eclipse.om2m.core.thread.CoreExecutor 
+Creating thread pool with corePoolSize=5 & maximumSize=50
+[2021-07-29 18:11:04,479 INFO] - org.eclipse.om2m.core.CSEInitializer 
+Initializating the cseBase
+[2021-07-29 18:11:04,498 INFO] - org.eclipse.om2m.core.CSEInitializer 
+cseBase already initialized
+[2021-07-29 18:11:04,498 INFO] - org.eclipse.om2m.core.Activator 
+Registering CseService...
+[2021-07-29 18:11:04,504 INFO] - org.eclipse.om2m.binding.http.Activator 
+CseService discovered
+[2021-07-29 18:11:04,587 INFO] - org.eclipse.om2m.sdt.home.monitoring.util.AeRegistration 
+createACP
+[2021-07-29 18:11:04,588 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ to=/in-cse/in-name,
+ from=admin:admin,
+ resourceType=1,
+ content=org.eclipse.om2m.commons.resource.AccessControlPolicy@49350,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ , 
+,tokens=null]
+[2021-07-29 18:11:04,590 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /in-cse/in-name
+[2021-07-29 18:11:04,593 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AccessControlPolicyController]
+[2021-07-29 18:11:04,618 ERROR] - org.eclipse.om2m.core.controller.Controller 
+om2mException
+org.eclipse.om2m.commons.exceptions.ConflictException: Name already present in the parent collection.
+	at org.eclipse.om2m.core.controller.AccessControlPolicyController.doCreate(AccessControlPolicyController.java:185)
+	at org.eclipse.om2m.core.controller.Controller.doRequest(Controller.java:77)
+	at org.eclipse.om2m.core.router.Router.doRequest(Router.java:240)
+	at org.eclipse.om2m.sdt.home.monitoring.util.AeRegistration.createACP(AeRegistration.java:181)
+	at org.eclipse.om2m.sdt.home.monitoring.util.AeRegistration.createAe(AeRegistration.java:93)
+	at org.eclipse.om2m.sdt.home.monitoring.Activator.activate(Activator.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:235)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:914)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:862)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:801)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:225)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:464)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:482)
+	at org.eclipse.om2m.core.Activator$2$1.run(Activator.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2021-07-29 18:11:04,619 INFO] - org.eclipse.om2m.core.controller.Controller 
+Clear and close transaction
+[2021-07-29 18:11:04,622 ERROR] - org.eclipse.om2m.core.router.Router 
+OM2M exception caught in Router: Name already present in the parent collection.
+org.eclipse.om2m.commons.exceptions.ConflictException: Name already present in the parent collection.
+	at org.eclipse.om2m.core.controller.AccessControlPolicyController.doCreate(AccessControlPolicyController.java:185)
+	at org.eclipse.om2m.core.controller.Controller.doRequest(Controller.java:77)
+	at org.eclipse.om2m.core.router.Router.doRequest(Router.java:240)
+	at org.eclipse.om2m.sdt.home.monitoring.util.AeRegistration.createACP(AeRegistration.java:181)
+	at org.eclipse.om2m.sdt.home.monitoring.util.AeRegistration.createAe(AeRegistration.java:93)
+	at org.eclipse.om2m.sdt.home.monitoring.Activator.activate(Activator.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:235)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:914)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:862)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:801)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:225)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:464)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:482)
+	at org.eclipse.om2m.core.Activator$2$1.run(Activator.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2021-07-29 18:11:04,623 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [
+ responseStatusCode=4105
+ to=admin:admin
+ from=/in-cse
+ contentType=text/plain,
+ content (Only first 1000 caracters)=
+ Name already present in the parent collection.
+]
+[2021-07-29 18:11:04,623 INFO] - org.eclipse.om2m.sdt.home.monitoring.util.AeRegistration 
+createACP KO ResponsePrimitive [
+ responseStatusCode=4105
+ to=admin:admin
+ from=/in-cse
+ contentType=text/plain,
+ content (Only first 1000 caracters)=
+ Name already present in the parent collection.
+]
+[2021-07-29 18:11:04,624 INFO] - org.eclipse.om2m.core.Activator 
+IPE service discovered: HomeMonitoringPOA
+[2021-07-29 18:11:04,625 INFO] - org.eclipse.om2m.sdt.home.monitoring.Activator 
+Register test /Home_Monitoring_Application http context
+[2021-07-29 18:11:04,633 INFO] - org.eclipse.om2m.ipe.sdt.Activator 
+setCseService
+[2021-07-29 18:11:04,635 INFO] - org.eclipse.om2m.ipe.sdt.Activator 
+activate SDT IPE
+[2021-07-29 18:11:04,635 INFO] - org.eclipse.om2m.ipe.sdt.Activator 
+updated(cse.id.to.be.announced=null)
+updated(cse.name.to.be.announced=null)
+updated(announcement.enabled=false)
+updated(ipe.under.announced.resource=false)
+[2021-07-29 18:11:04,635 INFO] - org.eclipse.om2m.ipe.sdt.Activator 
+Start IPE App null / null / false
+[2021-07-29 18:11:04,636 INFO] - org.eclipse.om2m.ipe.sdt.SDTIpeApplication 
+create ipe application
+[2021-07-29 18:11:04,636 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ to=/in-cse/in-name,
+ from=admin:admin,
+ resourceType=2,
+ content=org.eclipse.om2m.commons.resource.AE@54f5760b,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ , 
+,tokens=null]
+[2021-07-29 18:11:04,637 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /in-cse/in-name
+[2021-07-29 18:11:04,638 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2021-07-29 18:11:04,652 ERROR] - org.eclipse.om2m.core.controller.Controller 
+om2mException
+org.eclipse.om2m.commons.exceptions.ConflictException: Name already present in the parent collection.
+	at org.eclipse.om2m.core.controller.AEController.doCreate(AEController.java:316)
+	at org.eclipse.om2m.core.controller.Controller.doRequest(Controller.java:77)
+	at org.eclipse.om2m.core.router.Router.doRequest(Router.java:240)
+	at org.eclipse.om2m.ipe.sdt.CseUtil.sendCreateApplicationEntityRequest(CseUtil.java:62)
+	at org.eclipse.om2m.ipe.sdt.SDTIpeApplication.publishSDTIPEApplication(SDTIpeApplication.java:124)
+	at org.eclipse.om2m.ipe.sdt.Activator.registerSdtIpeApplication(Activator.java:125)
+	at org.eclipse.om2m.ipe.sdt.Activator.startSdtIpe(Activator.java:152)
+	at org.eclipse.om2m.ipe.sdt.Activator.activate(Activator.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:235)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:914)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:862)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:801)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:225)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:464)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:482)
+	at org.eclipse.om2m.core.Activator$2$1.run(Activator.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2021-07-29 18:11:04,652 INFO] - org.eclipse.om2m.core.controller.Controller 
+Clear and close transaction
+[2021-07-29 18:11:04,653 ERROR] - org.eclipse.om2m.core.router.Router 
+OM2M exception caught in Router: Name already present in the parent collection.
+org.eclipse.om2m.commons.exceptions.ConflictException: Name already present in the parent collection.
+	at org.eclipse.om2m.core.controller.AEController.doCreate(AEController.java:316)
+	at org.eclipse.om2m.core.controller.Controller.doRequest(Controller.java:77)
+	at org.eclipse.om2m.core.router.Router.doRequest(Router.java:240)
+	at org.eclipse.om2m.ipe.sdt.CseUtil.sendCreateApplicationEntityRequest(CseUtil.java:62)
+	at org.eclipse.om2m.ipe.sdt.SDTIpeApplication.publishSDTIPEApplication(SDTIpeApplication.java:124)
+	at org.eclipse.om2m.ipe.sdt.Activator.registerSdtIpeApplication(Activator.java:125)
+	at org.eclipse.om2m.ipe.sdt.Activator.startSdtIpe(Activator.java:152)
+	at org.eclipse.om2m.ipe.sdt.Activator.activate(Activator.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:235)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:914)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:862)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:801)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:225)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:464)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:482)
+	at org.eclipse.om2m.core.Activator$2$1.run(Activator.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2021-07-29 18:11:04,653 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [
+ responseStatusCode=4105
+ to=admin:admin
+ from=/in-cse
+ contentType=text/plain,
+ content (Only first 1000 caracters)=
+ Name already present in the parent collection.
+]
+[2021-07-29 18:11:04,653 INFO] - org.eclipse.om2m.ipe.sdt.SDTIpeApplication 
+delete ipe application
+[2021-07-29 18:11:04,653 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ to=/in-cse/in-name,
+ from=admin:admin,
+ resourceType=2,
+ content=org.eclipse.om2m.commons.resource.AE@54f5760b,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ , 
+,tokens=null]
+[2021-07-29 18:11:04,654 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /in-cse/in-name
+[2021-07-29 18:11:04,654 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2021-07-29 18:11:04,665 ERROR] - org.eclipse.om2m.core.controller.Controller 
+om2mException
+org.eclipse.om2m.commons.exceptions.ConflictException: Name already present in the parent collection.
+	at org.eclipse.om2m.core.controller.AEController.doCreate(AEController.java:316)
+	at org.eclipse.om2m.core.controller.Controller.doRequest(Controller.java:77)
+	at org.eclipse.om2m.core.router.Router.doRequest(Router.java:240)
+	at org.eclipse.om2m.ipe.sdt.CseUtil.sendCreateApplicationEntityRequest(CseUtil.java:62)
+	at org.eclipse.om2m.ipe.sdt.SDTIpeApplication.publishSDTIPEApplication(SDTIpeApplication.java:124)
+	at org.eclipse.om2m.ipe.sdt.Activator.registerSdtIpeApplication(Activator.java:125)
+	at org.eclipse.om2m.ipe.sdt.Activator.startSdtIpe(Activator.java:152)
+	at org.eclipse.om2m.ipe.sdt.Activator.activate(Activator.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:235)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:914)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:862)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:801)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:225)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:464)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:482)
+	at org.eclipse.om2m.core.Activator$2$1.run(Activator.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2021-07-29 18:11:04,665 INFO] - org.eclipse.om2m.core.controller.Controller 
+Clear and close transaction
+[2021-07-29 18:11:04,666 ERROR] - org.eclipse.om2m.core.router.Router 
+OM2M exception caught in Router: Name already present in the parent collection.
+org.eclipse.om2m.commons.exceptions.ConflictException: Name already present in the parent collection.
+	at org.eclipse.om2m.core.controller.AEController.doCreate(AEController.java:316)
+	at org.eclipse.om2m.core.controller.Controller.doRequest(Controller.java:77)
+	at org.eclipse.om2m.core.router.Router.doRequest(Router.java:240)
+	at org.eclipse.om2m.ipe.sdt.CseUtil.sendCreateApplicationEntityRequest(CseUtil.java:62)
+	at org.eclipse.om2m.ipe.sdt.SDTIpeApplication.publishSDTIPEApplication(SDTIpeApplication.java:124)
+	at org.eclipse.om2m.ipe.sdt.Activator.registerSdtIpeApplication(Activator.java:125)
+	at org.eclipse.om2m.ipe.sdt.Activator.startSdtIpe(Activator.java:152)
+	at org.eclipse.om2m.ipe.sdt.Activator.activate(Activator.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:235)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:914)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:862)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:801)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:225)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:464)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:482)
+	at org.eclipse.om2m.core.Activator$2$1.run(Activator.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2021-07-29 18:11:04,666 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [
+ responseStatusCode=4105
+ to=admin:admin
+ from=/in-cse
+ contentType=text/plain,
+ content (Only first 1000 caracters)=
+ Name already present in the parent collection.
+]
+[2021-07-29 18:11:04,666 INFO] - org.eclipse.om2m.ipe.sdt.SDTIpeApplication 
+delete ipe application
+[2021-07-29 18:11:04,666 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ to=/in-cse/in-name,
+ from=admin:admin,
+ resourceType=2,
+ content=org.eclipse.om2m.commons.resource.AE@54f5760b,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ , 
+,tokens=null]
+[2021-07-29 18:11:04,666 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /in-cse/in-name
+[2021-07-29 18:11:04,667 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2021-07-29 18:11:04,677 ERROR] - org.eclipse.om2m.core.controller.Controller 
+om2mException
+org.eclipse.om2m.commons.exceptions.ConflictException: Name already present in the parent collection.
+	at org.eclipse.om2m.core.controller.AEController.doCreate(AEController.java:316)
+	at org.eclipse.om2m.core.controller.Controller.doRequest(Controller.java:77)
+	at org.eclipse.om2m.core.router.Router.doRequest(Router.java:240)
+	at org.eclipse.om2m.ipe.sdt.CseUtil.sendCreateApplicationEntityRequest(CseUtil.java:62)
+	at org.eclipse.om2m.ipe.sdt.SDTIpeApplication.publishSDTIPEApplication(SDTIpeApplication.java:124)
+	at org.eclipse.om2m.ipe.sdt.Activator.registerSdtIpeApplication(Activator.java:125)
+	at org.eclipse.om2m.ipe.sdt.Activator.startSdtIpe(Activator.java:152)
+	at org.eclipse.om2m.ipe.sdt.Activator.activate(Activator.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:235)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:914)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:862)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:801)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:225)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:464)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:482)
+	at org.eclipse.om2m.core.Activator$2$1.run(Activator.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2021-07-29 18:11:04,677 INFO] - org.eclipse.om2m.core.controller.Controller 
+Clear and close transaction
+[2021-07-29 18:11:04,678 ERROR] - org.eclipse.om2m.core.router.Router 
+OM2M exception caught in Router: Name already present in the parent collection.
+org.eclipse.om2m.commons.exceptions.ConflictException: Name already present in the parent collection.
+	at org.eclipse.om2m.core.controller.AEController.doCreate(AEController.java:316)
+	at org.eclipse.om2m.core.controller.Controller.doRequest(Controller.java:77)
+	at org.eclipse.om2m.core.router.Router.doRequest(Router.java:240)
+	at org.eclipse.om2m.ipe.sdt.CseUtil.sendCreateApplicationEntityRequest(CseUtil.java:62)
+	at org.eclipse.om2m.ipe.sdt.SDTIpeApplication.publishSDTIPEApplication(SDTIpeApplication.java:124)
+	at org.eclipse.om2m.ipe.sdt.Activator.registerSdtIpeApplication(Activator.java:125)
+	at org.eclipse.om2m.ipe.sdt.Activator.startSdtIpe(Activator.java:152)
+	at org.eclipse.om2m.ipe.sdt.Activator.activate(Activator.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:235)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:914)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:862)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:801)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:225)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:464)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:482)
+	at org.eclipse.om2m.core.Activator$2$1.run(Activator.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2021-07-29 18:11:04,678 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [
+ responseStatusCode=4105
+ to=admin:admin
+ from=/in-cse
+ contentType=text/plain,
+ content (Only first 1000 caracters)=
+ Name already present in the parent collection.
+]
+[2021-07-29 18:11:04,678 INFO] - org.eclipse.om2m.ipe.sdt.SDTIpeApplication 
+delete ipe application
+[2021-07-29 18:11:04,681 INFO] - org.eclipse.om2m.binding.coap.Activator 
+CSE Service discovered
+[2021-07-29 18:11:04,681 INFO] - org.eclipse.om2m.core.Activator 
+CSE Started
